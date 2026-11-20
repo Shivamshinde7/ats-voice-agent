@@ -1,0 +1,24 @@
+{
+  "name": "ats-voice-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/audio-utils.test.js test/recruitment-agent.test.js test/interview-agent.test.js test/llm-client.test.js test/security.test.js test/local-test.test.js test/providers.test.js test/conversation-turn.test.js",
+    "dev": "nodemon src/server.js",
+    "test:local": "node src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "sarvamai": "^1.1.15",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
